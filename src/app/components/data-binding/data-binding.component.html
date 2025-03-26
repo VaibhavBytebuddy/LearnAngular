@@ -1,0 +1,60 @@
+<div class="container mt-4">
+          <h1 class="text-center">One Way Data Binding</h1>
+        
+          <div class="row">
+            <!-- Interpolation Section -->
+            <div class="col-md-6 bg-primary text-white p-3">
+              <h3>Interpolation</h3>
+              <h2>{{ courseName }}</h2>
+               <br />
+              <input type="{{ inputType }}" class="form-control" />
+              <br />  
+              <input type="{{ inputType2 }}" class="form-control" />
+            </div>
+        
+            <!-- Property Binding Section -->
+            <div class="col-md-6 p-3" [class]="myClassName">
+              <h3>Property Binding</h3>
+              <div [class]="myClassName2">
+                <h4>Property Binding Example</h4>
+              </div>
+              <input [type]="inputType" class="form-control" />
+              <br />
+              <input type="text" [value]="courseName" class="form-control" />
+            </div>
+          </div>
+        
+          <!-- Event Binding Section -->
+          <div class="row mt-4">
+            <div class="col-md-12 text-center">
+              <h3>Event Binding</h3>
+              <h4>.ts to HTML</h4>
+              <button class="btn btn-success" (click)="showAlert('Welcome to Angular')">Show Message</button>
+              <span (click)="showAlert('this is span ')">Click me</span>
+              <button class="btn btn-secondary" (click)="changeCourseName()">ChangeCourseName</button>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+                    <div class="col-md-12 text-center">
+                      <h3>Two way Binding using ng</h3>
+                      <h4>.ts to HTML and html to ts</h4>
+                      <input type="text" [(ngModel)]="courseName">
+                     
+                    </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-12 text-center">
+              <h3>Signal binding  </h3>
+              <h6>use it in intepolation ,Property ,event and two way databinging </h6>
+              <input type="text" name="" id="" value={{firstName()}}>
+              <br>
+              <button (click)="changeName()">changeSignalvalue</button>
+             
+            </div>
+  </div>
+        
+
+        </div>
+        
